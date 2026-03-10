@@ -1,7 +1,7 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -12,12 +12,13 @@ body {
   font-family: "Times New Roman", Times, serif;
   color: #111111;
   background: #ffffff;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 img {
   display: block;
   width: 100%;
+  height: auto;
 }
 
 .container {
@@ -26,206 +27,164 @@ img {
 }
 
 .hero {
-  padding: 72px 0 56px;
+  padding: 84px 0 72px;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .hero-inner {
-  max-width: 1050px;
+  max-width: 1040px;
 }
 
 .eyebrow,
 .section-label {
-  font-size: 0.82rem;
-  letter-spacing: 0.14em;
+  font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  margin-bottom: 20px;
-  color: #222222;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  color: #555555;
+  margin-bottom: 18px;
 }
 
 .hero h1 {
-  font-size: clamp(3.4rem, 8vw, 7rem);
+  font-size: clamp(3.2rem, 8vw, 6.2rem);
   line-height: 0.95;
   font-weight: 400;
-  max-width: 980px;
-  margin-bottom: 28px;
-}
-
-.intro {
-  font-size: 1.28rem;
-  max-width: 720px;
-  line-height: 1.45;
+  max-width: 1000px;
   margin-bottom: 26px;
 }
 
+.intro {
+  font-size: 1.1rem;
+  max-width: 860px;
+  margin-bottom: 22px;
+}
+
 .byline {
-  font-size: 1rem;
   font-style: italic;
+  font-size: 1rem;
 }
 
 .case-section {
   padding: 72px 0;
-  border-top: 1px solid #e7e7e7;
+}
+
+.case-section.alt {
+  background: #fafafa;
 }
 
 .section-grid {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 64px;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
   align-items: center;
 }
 
-.reverse .section-grid {
-  grid-template-columns: 1.05fr 0.95fr;
+.reverse {
+  direction: rtl;
 }
 
-.reverse .section-media {
-  order: 2;
-}
-
-.reverse .section-content {
-  order: 1;
-}
-
-.section-media {
-  display: flex;
-  justify-content: center;
+.reverse > * {
+  direction: ltr;
 }
 
 .section-media img {
-  width: 100%;
-  max-width: 460px;
-  height: auto;
-  object-fit: contain;
-}
-
-.section-content {
-  max-width: 620px;
+  border-radius: 2px;
 }
 
 .section-content h2,
 .dark-left h2,
 .closing h2 {
-  font-size: clamp(2.2rem, 4.5vw, 3.9rem);
-  line-height: 1.05;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.1;
   font-weight: 400;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
+}
+
+.section-content h3,
+.dark-right h3,
+.problem-item h3 {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
 }
 
 .section-content p,
+.dark-left p,
 .dark-right p,
-.closing p {
-  font-size: 1.16rem;
-  margin-bottom: 18px;
+.closing p,
+.problem-item p,
+.impact-item p {
+  font-size: 1.03rem;
+  margin-bottom: 16px;
 }
 
 blockquote {
-  font-size: clamp(1.5rem, 3vw, 2.4rem);
-  line-height: 1.2;
-  font-weight: 400;
-  margin-bottom: 26px;
-  color: #111111;
-}
-
-.stats-section {
-  padding: 72px 0;
-  border-top: 1px solid #e7e7e7;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.stat-card {
-  padding-top: 8px;
-}
-
-.stat-number {
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  margin-bottom: 16px;
-  color: #666666;
-}
-
-.stat-card h3 {
-  font-size: 1.45rem;
-  line-height: 1.2;
-  font-weight: 400;
-  margin-bottom: 12px;
-}
-
-.stat-card p {
-  font-size: 1.03rem;
-  line-height: 1.55;
-}
-
-.dark-section {
-  background: #111111;
-  color: #f5f5f5;
-  padding: 78px 0;
-  margin-top: 10px;
-}
-
-.dark-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 64px;
-  align-items: start;
-}
-
-.dark-label {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.dark-right > p {
-  margin-bottom: 28px;
-}
-
-.solution-list {
-  display: grid;
-  gap: 26px;
-}
-
-.solution-item h3 {
   font-size: 1.35rem;
-  font-weight: 400;
-  margin-bottom: 8px;
+  line-height: 1.35;
+  font-style: italic;
+  margin-bottom: 22px;
+  color: #222222;
+  border-left: 3px solid #d9d9d9;
+  padding-left: 18px;
 }
 
-.solution-item p {
-  font-size: 1.03rem;
-  color: rgba(255, 255, 255, 0.88);
-  margin-bottom: 0;
-}
-
-.impact-list {
-  margin-top: 26px;
+.problem-list {
+  margin-top: 24px;
   display: grid;
-  gap: 16px;
+  gap: 22px;
 }
 
-.impact-item {
-  border-top: 1px solid #e7e7e7;
-  padding-top: 14px;
-}
-
+.problem-item span,
 .impact-item span {
-  display: block;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.82rem;
   letter-spacing: 0.1em;
   color: #666666;
   margin-bottom: 8px;
 }
 
-.impact-item p {
-  margin-bottom: 0;
-  font-size: 1.02rem;
+.dark-section {
+  background: #121212;
+  color: #f5f5f5;
+}
+
+.dark-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.light {
+  color: #cfcfcf;
+}
+
+.feature-list {
+  list-style: none;
+  margin-top: 18px;
+}
+
+.feature-list li {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 24px;
+  margin-top: 18px;
+}
+
+.impact-item {
+  padding: 18px;
+  border: 1px solid #e8e8e8;
 }
 
 .closing {
   padding: 88px 0 100px;
-  border-top: 1px solid #e7e7e7;
+  border-top: 1px solid #e8e8e8;
 }
 
 .closing-inner {
@@ -234,51 +193,33 @@ blockquote {
 
 @media (max-width: 980px) {
   .section-grid,
-  .reverse .section-grid,
   .dark-grid,
-  .stats-grid {
+  .impact-grid {
     grid-template-columns: 1fr;
   }
 
-  .reverse .section-media,
-  .reverse .section-content {
-    order: initial;
-  }
-
-  .section-media img {
-    max-width: 520px;
-  }
-
-  .case-section,
-  .stats-section,
-  .dark-section,
-  .closing {
-    padding: 58px 0;
+  .reverse {
+    direction: ltr;
   }
 }
 
 @media (max-width: 640px) {
   .hero {
-    padding: 48px 0 40px;
+    padding: 56px 0 48px;
+  }
+
+  .case-section,
+  .closing {
+    padding: 52px 0;
   }
 
   .intro,
   .section-content p,
+  .dark-left p,
   .dark-right p,
-  .closing p {
-    font-size: 1.02rem;
-  }
-
-  .section-grid,
-  .dark-grid {
-    gap: 34px;
-  }
-
-  blockquote {
-    font-size: 1.35rem;
-  }
-
-  .section-media img {
-    max-width: 100%;
+  .closing p,
+  .problem-item p,
+  .impact-item p {
+    font-size: 1rem;
   }
 }
